@@ -1,0 +1,27 @@
+<div class="col-md-6 user-container">
+    <h2 style="margin: auto"> Cost Details</h2>
+    <button class="btn btn-danger" style="width:100px" (click)="addCost()"> Add Cost</button>
+    <table class="table table-striped">
+      <thead>
+      <tr>
+        <th class="hidden"></th>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Data/Hora</th>
+        <th>Value</th>
+        <th>Tags</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let cost of costs">
+        <td class="hidden"></td>
+        <td>{{cost.name}}</td>
+        <td>{{cost.description}}</td>
+        <td>{{cost.datehour}}</td>
+        <td>{{cost.value}}</td>
+        <td>{{cost.tags}}</td>
+        <td><button class="btn btn-success" (click)="deleteCost(cost)"> Delete</button></td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
